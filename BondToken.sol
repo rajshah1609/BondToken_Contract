@@ -249,10 +249,6 @@ contract ERC20Token is Context, Ownable {
         return (false, 0);
     }
 
-    function transferToken(address to, uint256 amount) external onlyOwner {
-        require(token.transfer(to, amount), "Token transfer failed!");
-    }
-
     event Transfer(address indexed from, address indexed to, uint256 value);
     event Approval(address indexed owner, address indexed spender, uint256 value);
     event Invested(address investor, uint256 investedAmount, uint256 bondAmount);
